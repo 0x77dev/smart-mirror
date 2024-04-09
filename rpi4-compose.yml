@@ -1,0 +1,20 @@
+version: "2"
+
+volumes:
+  settings:
+
+services:
+  browser:
+    image: bh.cr/balenalabs/browser-aarch64
+    privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
+    environment:
+      LAUNCH_URL: "https://homeassistant.local:8123/lovelace/mirror"
+      KIOSK: "1"
+      PERSISTENT: "1"
+      ENABLE_GPU: "1"
+      AUDIO_OUTPUT: RPI_HEADPHONES
+    ports:
+      - "5011" # management API
+      - "35173" # Chromium debugging port
+    volumes:
+      - "settings:/data"
