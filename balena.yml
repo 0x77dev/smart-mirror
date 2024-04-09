@@ -1,0 +1,16 @@
+name: smart-mirror
+type: sw.application
+description: >-
+  Home Assistant based smart mirror
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/0x77dev/smart-mirror'
+data:
+  applicationEnvironmentVariables:
+    - LAUNCH_URL: 'http://homeassistant.local:8123'
+  defaultDeviceType: raspberry-pi
+  supportedDeviceTypes:
+    - raspberrypi4-64
+version: 0.0.0
