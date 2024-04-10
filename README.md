@@ -57,7 +57,7 @@ views:
     max_columns: 10
     theme: blackened
 ```
-And then to edit the dashboard use `/dashboard-mirror/?disable_km&edit=1` and see [Setting custom URL](#setting-custom-url) to set the custom URL (omit the query parameters) for your separate your dashboard.
+And then to edit the dashboard use `/dashboard-mirror/?disable_km&edit=1` and see [Setting custom URL](#setting-custom-url) to set the custom URL (omit the query parameters) for your separate dashboard.
 
 ## Manual way
 
