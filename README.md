@@ -2,6 +2,8 @@
 
 Simple smart mirror project using a Raspberry Pi 4 and BalenaCloud to display a Home Assistant dashboard.
 
+[Home Assistant Community Topic](https://community.home-assistant.io/t/smart-mirror-with-lovelace-dashboard/715299)
+
 ## Hardware
 
 - Raspberry Pi 4
