@@ -1,12 +1,12 @@
 # HA Smart mirror
 
-This is a basic configuration for Raspberry Pi 4 to operate a kiosk Chrome browser running Home Assistant tab on BalenaOS with auth bypass and Browser API for automation and remote control.
+Simple smart mirror project using a Raspberry Pi 4 and BalenaCloud to display a Home Assistant dashboard.
 
 ## Hardware
 
 - Raspberry Pi 4
 - SD Card (4GB+)
-- HDMI monitor or a [buy a pre made smart mirror with HDMI input and cables for RPI 4](https://amzn.to/4cIKq5o)
+- [I bought this pre-built smart mirror on Amazon](https://amzn.to/4cIKq5o), but you can build one yourself or just use any monitor.
 
 ## Easy way
 
@@ -36,7 +36,26 @@ homeassistant:
     - type: homeassistant
 ```
 
-5. Optional: Install [Kiosk mode](https://github.com/NemesisRE/kiosk-mode), and [Browser mod](https://github.com/thomasloven/hass-browser_mod) for better automation and UI experience.
+5. Optional: Install [Kiosk mode](https://github.com/NemesisRE/kiosk-mode), [Blackened Theme](https://github.com/home-assistant-community-themes/blackened), and [Browser mod](https://github.com/thomasloven/hass-browser_mod) for better automation and UI experience.
+
+I use a separate dashboard for the smart mirror with a custom theme and kiosk mode to hide the header and sidebar.
+
+Here is an example of the dashboard configuration:
+```yaml
+kiosk_mode:
+  kiosk: true
+  hide_refresh: true
+  block_overflow: true
+views:
+  - type: sections
+    title: Home
+    icon: mdi:home
+    sections: []
+    cards: []
+    max_columns: 10
+    theme: blackened
+```
+And then to edit the dashboard use `/dashboard-mirror/?disable_km&edit=1` and see [Setting custom URL](#setting-custom-url) to set the custom URL (omit the query parameters) for separate your dashboard.
 
 ## Manual way
 
