@@ -30,7 +30,7 @@ homeassistant:
         # Set your smart mirror ip address and kiosk user id
         # Tip: to enhance security and avoid ip changes modify your router DHCP server to assign a static ip to your smart mirror
         {{ smart mirror ip address }}: {{ user uuid }}
-        # Disable access for the rest of the network
+        # Disable bypass for the rest of the network
         192.168.0.0/24:
       allow_bypass_login: true
     - type: homeassistant
@@ -61,12 +61,17 @@ balena push <app-name>
 
 6. Patch your home assistant configuration to bypass auth for smart mirror as mentioned in the easy way.
 
+## Setting custom URL
+
+1. Open the balena dashboard and navigate to your device.
+2. Open Device Variables
+3. Add a new variable with the key `LAUNCH_URL` and value with your Home Assistant or any other URL.
 
 ## Additional docs
 
-- [Browser REST API](https://github.com/balena-io-experimental/browser?tab=readme-ov-file#api)
-- [Auth providers](https://www.home-assistant.io/docs/authentication/providers)
-- [BalenaOS](https://docs.balena.io/learn/getting-started/raspberrypi5/nodejs/)
+- [Browser/ REST API and Configuration variables](https://github.com/balena-io-experimental/browser?tab=readme-ov-file#api)
+- [Home Assistant/ Auth providers](https://www.home-assistant.io/docs/authentication/providers)
+- [Getting started with Balena](https://docs.balena.io/learn/getting-started/raspberrypi5/nodejs/)
 
 ## Useful commands
 
@@ -74,4 +79,10 @@ balena push <app-name>
 
 ```bash
 curl -X POST {{ SMART MIRROR IP ADDRESS }}:5011/refresh
+```
+
+### Screenshot
+
+```url
+{{ SMART MIRROR IP ADDRESS }}:5011/screenshot
 ```
