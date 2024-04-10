@@ -13,7 +13,7 @@ services:
       PERSISTENT: "1"
       ENABLE_GPU: "1"
       AUDIO_OUTPUT: RPI_HEADPHONES
-      EXTRA_FLAGS: "--remote-debugging-port=35173 --remote-debugging-address=0.0.0.0 --enable-features=WebContentsForceDark"
+      EXTRA_FLAGS: "--remote-debugging-port=35173 --remote-debugging-address=0.0.0.0 --enable-features=WebContentsForceDark,OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter"
     ports:
       - "5011" # management API
       - "35173" # Chromium debugging port
