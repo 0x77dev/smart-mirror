@@ -30,6 +30,8 @@ homeassistant:
         # Set your smart mirror ip address and kiosk user id
         # Tip: to enhance security and avoid ip changes modify your router DHCP server to assign a static ip to your smart mirror
         {{ smart mirror ip address }}: {{ user uuid }}
+        # Disable access for the rest of the network
+        192.168.0.0/24:
       allow_bypass_login: true
     - type: homeassistant
 ```
