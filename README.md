@@ -4,11 +4,13 @@ Simple smart mirror project using a Raspberry Pi 4 and BalenaCloud to display a 
 
 [Home Assistant Community Topic](https://community.home-assistant.io/t/smart-mirror-with-lovelace-dashboard/715299)
 
+![My setup looks like this](https://repository-images.githubusercontent.com/784446111/b1ce65e2-ea77-44a3-9cfc-61575e1e017b)
+
 ## Hardware
 
 - Raspberry Pi 4
 - SD Card (4GB+)
-- [I bought this pre-built smart mirror on Amazon](https://amzn.to/4cIKq5o), but you can build one yourself or just use any monitor.
+- [I bought this pre-built smart mirror on Amazon](https://amzn.to/4cIKq5o), but you can build one or use any monitor.
 
 ## Easy way
 
@@ -19,7 +21,7 @@ Simple smart mirror project using a Raspberry Pi 4 and BalenaCloud to display a 
 
 3. Set static IP for your RPI4 in your router DHCP server settings.
 
-4. Patch your home assistant configuration to bypass auth for smart mirror
+4. Patch your home assistant configuration to bypass auth for the smart mirror
 
 ```yaml
 homeassistant:
@@ -80,7 +82,7 @@ balena push <app-name>
 
 5. Set static IP for your RPI4 in your router DHCP server settings.
 
-6. Patch your home assistant configuration to bypass auth for smart mirror as mentioned in the easy way.
+6. Patch your home assistant configuration to bypass auth for the smart mirror as mentioned in the [easy way](#easy-way).
 
 ## Setting custom URL
 
